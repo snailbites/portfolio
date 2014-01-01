@@ -94,17 +94,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 42, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 .clear {
   clear: both;
 }
 
-/* line 45, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 body, html {
   background: #24345a url(../../img/noise.png) repeat 0 0;
 }
 
-/* line 48, ../sass/screen.scss */
+/* line 47, ../sass/screen.scss */
 article {
   min-height: 600px;
   max-width: 960px;
@@ -113,7 +113,7 @@ article {
   padding: 10px;
 }
 
-/* line 57, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 #navbar {
   position: absolute;
   background-color: #be342a;
@@ -122,24 +122,33 @@ article {
   height: 34px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
+  -webkit-box-shadow: #222222 -2px 2px 8px;
+  -moz-box-shadow: #222222 -2px 2px 8px;
+  box-shadow: #222222 -2px 2px 8px;
 }
-/* line 65, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 #navbar ul {
   padding: 9px;
 }
-/* line 67, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 #navbar ul li {
   display: inline;
   padding: 15px;
   color: #FFF;
 }
-/* line 73, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 #navbar.stick {
   position: fixed;
   top: 20px;
 }
+/* line 78, ../sass/screen.scss */
+#navbar.about {
+  -webkit-box-shadow: #666666 -2px 2px 8px;
+  -moz-box-shadow: #666666 -2px 2px 8px;
+  box-shadow: #666666 -2px 2px 8px;
+}
 
-/* line 83, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 #home .intro {
   width: 400px;
   text-align: right;
@@ -150,12 +159,12 @@ article {
   color: #C9C9C9;
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 #about figure {
   float: left;
   margin: 0px 50px;
 }
-/* line 100, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 #about .bio {
   width: 300px;
   font-family: 'sofia_pro_lightregular', Helvetica, Arial, sans-serif;
@@ -163,7 +172,7 @@ article {
   line-height: 22px;
   float: left;
 }
-/* line 106, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 #about .bio p {
   margin-bottom: 25px;
 }

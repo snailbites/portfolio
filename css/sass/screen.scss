@@ -21,7 +21,6 @@
  *
  *
  */
-
 @font-face {
     font-family: 'sofia_pro_lightregular';
     src: url('../fonts/SofiaProLight-webfont.eot');
@@ -34,9 +33,9 @@
 
 }
 
-
-
+// COMPASS INCLUDES
 @import "compass/reset";
+@import "compass/css3/box-shadow";
 
 // UTILITY CLASSES
 .clear { clear: both; }
@@ -62,6 +61,8 @@ article {
   height: 34px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
+  @include box-shadow(#222 -2px 2px 8px);
+
   ul {
     padding: 9px;
     li {
@@ -73,6 +74,9 @@ article {
   &.stick {
     position: fixed;
     top: 20px;
+  }
+  &.about {
+    @include box-shadow(#666 -2px 2px 8px);
   }
 }
 
