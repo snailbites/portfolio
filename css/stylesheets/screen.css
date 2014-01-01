@@ -94,36 +94,52 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 41, ../sass/screen.scss */
+/* line 42, ../sass/screen.scss */
+.clear {
+  clear: both;
+}
+
+/* line 45, ../sass/screen.scss */
 body, html {
   background: #24345a url(../../img/noise.png) repeat 0 0;
+}
+
+/* line 48, ../sass/screen.scss */
+article {
+  min-height: 600px;
   max-width: 960px;
   width: auto;
   margin: 0 auto;
   padding: 10px;
 }
 
-/* line 49, ../sass/screen.scss */
+/* line 57, ../sass/screen.scss */
 #navbar {
-  position: fixed;
+  position: absolute;
   background-color: #be342a;
   border: 4px solid #000;
-  top: 485px;
-  height: 32px;
+  top: 525px;
+  height: 34px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
 }
-/* line 57, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 #navbar ul {
   padding: 9px;
 }
-/* line 59, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 #navbar ul li {
   display: inline;
   padding: 15px;
+  color: #FFF;
+}
+/* line 73, ../sass/screen.scss */
+#navbar.stick {
+  position: fixed;
+  top: 20px;
 }
 
-/* line 67, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 #home .intro {
   width: 400px;
   text-align: right;
@@ -132,4 +148,22 @@ body, html {
   font-size: 22px;
   line-height: 36px;
   color: #C9C9C9;
+}
+
+/* line 96, ../sass/screen.scss */
+#about figure {
+  float: left;
+  margin: 0px 50px;
+}
+/* line 100, ../sass/screen.scss */
+#about .bio {
+  width: 300px;
+  font-family: 'sofia_pro_lightregular', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  float: left;
+}
+/* line 106, ../sass/screen.scss */
+#about .bio p {
+  margin-bottom: 25px;
 }

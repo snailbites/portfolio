@@ -38,20 +38,28 @@
 
 @import "compass/reset";
 
+// UTILITY CLASSES
+.clear { clear: both; }
+
+// BASE TAGS
 body, html {
   background: #24345a url(../../img/noise.png) repeat 0 0;
+}
+article {
+  min-height: 600px;
   max-width: 960px;
   width: auto;
   margin: 0 auto;
   padding: 10px;
 }
 
+// NAVBAR
 #navbar {
-  position: fixed;
+  position: absolute;
   background-color: #be342a;
   border: 4px solid #000;
-  top: 485px;
-  height: 32px;
+  top: 525px;
+  height: 34px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   ul {
@@ -59,10 +67,18 @@ body, html {
     li {
       display: inline;
       padding: 15px;
+      color: #FFF;
     }
+  }
+  &.stick {
+    position: fixed;
+    top: 20px;
   }
 }
 
+//// MAIN SECTIONS
+
+// HOME
 #home {
   .intro {
     width: 400px;
@@ -73,6 +89,23 @@ body, html {
     line-height: 36px;
     color: #C9C9C9;
   }
+}
 
+// ABOUT
+#about {
+  figure {
+    float: left;
+    margin: 0px 50px;
+  }
+  .bio {
+      width: 300px;
+      font-family: 'sofia_pro_lightregular', Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 22px;
+      float: left;
+      p {
+        margin-bottom: 25px;
+      }
+  }
 }
 
