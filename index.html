@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,16 +9,35 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/stylesheets/screen.css" media="screen, projection" />
+        <link rel="stylesheet" href="css/stylesheets/print.css" media="print" />
+        <!--[if IE]>
+        <link rel="stylesheet" href="/stylesheets/ie.css" media="screen, projection" />
+        <![endif]-->
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        <nav id="navbar" class="navbar">
+            <ul>
+            <li>WORK</li>
+            <li>ABOUT</li>
+            <li>BLOG</li>
+            </ul>
+        </nav>
+        <article id="home" class="home">
+            <section class="intro">
+                My name is SNAIL<br>
+                I make websites<br>
+                I like the Knicks<br>
+                I engineer the front end at J.Crew<br>
+                I’m currently digging design patterns<br>
+            </section>
+        </article>
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+
+
+
+
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
