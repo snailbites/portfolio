@@ -36,6 +36,7 @@
 // COMPASS INCLUDES
 @import "compass/reset";
 @import "compass/css3/box-shadow";
+@import "compass/css3/transition";
 
 // UTILITY CLASSES
 .clear { clear: both; }
@@ -74,8 +75,19 @@ article {
       a {
         text-decoration: none;
         color: #FFF;
+        @include transition-duration(.2s);
+        &.selected,
+        &:hover {
+          color: #000;
+        }
+      }
+      &:first-child{
+        padding-left: 0;
       }
     }
+  }
+  &.bottom {
+    top: 1100px;
   }
   &.stick {
     position: fixed;
@@ -84,6 +96,14 @@ article {
   &.about {
     @include box-shadow(#666 -2px 2px 8px);
   }
+}
+
+// FOOTER
+#footer{
+  border-top: 4px solid #000;
+  background-color: #24345A;
+  width: 100%;
+  height: 225px;
 }
 
 //// MAIN SECTIONS
@@ -129,6 +149,16 @@ article {
       font-family: 'sofia_pro_lightregular', Helvetica, Arial, sans-serif;
       font-size: 18px;
       line-height: 30px;
+      a {
+        margin-bottom: 5px;
+        border-bottom: 3px solid transparent;
+        cursor: pointer;
+        @include transition-duration(.1s);
+        &.selected,
+        &:hover {
+          color: #BE342A;
+        }
+      }
     }
   }
   .figure {
