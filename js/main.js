@@ -37,7 +37,7 @@ var MyApp = (function(){
 	// window scrolling events
 	var watchScroll = function(){
 		var $navbar = $('#navbar'),
-			$navbarUL = $navbar.find('ul'),
+			$navbarUL = $('#navbarUL'),
 			$scrollTop = 0,
 			$body = $('body');
 		$window.scroll(function(){
