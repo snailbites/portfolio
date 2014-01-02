@@ -2,7 +2,8 @@ var MyApp = (function(){
 	// global vars
 	var $window = $(window),
 		isStickyNav = false,
-		isDefaultBg = true;
+		isDefaultBg = true,
+		isBottom = false;
 
 	// dynamically set padding of nav to home slide
 	var setNavPadding = function(){
@@ -57,21 +58,11 @@ var MyApp = (function(){
                 $navbar.addClass('stick');
                 isStickyNav = true;
             }
-            else if (isStickyNav === true && $scrollTop < 505){ // check at 1100
+            else if (isStickyNav === true && $scrollTop < 505 ){ // check at 1100
                 $navbar.removeClass('stick');
                 isStickyNav = false;
             }
-            /*
-            // stick the nav again at footer
-            if( isFooter === false && $scrollTop >= 505 ){
-                $navbar.addClass('stick');
-                isStickyNav = true;
-            }
-            else if (isFooter === true && $scrollTop < 505){ // check at 1100
-                $navbar.removeClass('stick');
-                isStickyNav = false;
-            }
-            */
+
 		});
 	};
 	var init = function(){
