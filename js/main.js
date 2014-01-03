@@ -23,8 +23,18 @@ var MyApp = (function(){
     // click events for portfolio
     var bindSidebarEvents = function(){
         $('.sidebar').on('click','a',function(){
+            var $this = $(this),
+                $project = $this.data('project');
+            // sidebar functionality
             $('.sidebar li a').removeClass('selected');
-            $(this).addClass('selected');
+            $this.addClass('selected');
+
+            // switch image
+            $('#screenshot').fadeOut(350,function(){
+                $(this).attr('src', "img/screenshots/" + $project + ".png").fadeIn(250);
+            });
+
+
         })
     }
 	// nav clicks

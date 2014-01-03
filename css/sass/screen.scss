@@ -6,7 +6,8 @@
 // COMPASS VARS
 $font-family-sofia      : 'sofia_pro_lightregular', Helvetica, Arial, sans-serif;
 $font-family-helvetica  : "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$bg-default             : #24345a;
+$default-bg             : #24345a;
+$default-red            : #BE342A;
 
 
 /*
@@ -49,7 +50,7 @@ $bg-default             : #24345a;
 
 // BASE TAGS
 body, html {
-  background: #24345a url(../../img/noise.png) repeat 0 0;
+  background: $default-bg url(../../img/noise.png) repeat 0 0;
   font-family: $font-family-sofia;
 }
 article {
@@ -69,7 +70,7 @@ article {
   font-weight: 300;
 
   ul {
-    background-color: #BE342A;
+    background-color: $default-red;
     border: 4px solid #000;
     border-left: 0 none;
     @include box-shadow(#222 -2px 2px 8px);
@@ -108,7 +109,7 @@ article {
 // FOOTER
 #footer{
   border-top: 4px solid #000;
-  background-color: #24345A;
+  background-color: $default-bg;
   width: 100%;
   height: 225px;
 }
@@ -151,7 +152,6 @@ article {
     width: 260px;
     margin-left: 50px;
     ul li {
-
       font-size: 18px;
       line-height: 30px;
       a {
@@ -161,13 +161,22 @@ article {
         @include transition-duration(.2s);
         &.selected,
         &:hover {
-          color: #BE342A;
+          color: $default-red;
         }
       }
     }
   }
-  .figure {
+  figure {
     float: left;
+    position: relative;
+    width: 630px;
+    height: 490px;
+    background: url(../../img/work-imac.png) no-repeat 0 0;
+    #screenshot {
+      position: absolute;
+      top: 26px;
+      left: 25px;
+    }
   }
 }
 
