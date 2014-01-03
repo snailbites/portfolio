@@ -1,3 +1,14 @@
+// COMPASS INCLUDES
+@import "compass/reset";
+@import "compass/css3/box-shadow";
+@import "compass/css3/transition";
+
+// COMPASS VARS
+$font-family-sofia      : 'sofia_pro_lightregular', Helvetica, Arial, sans-serif;
+$font-family-helvetica  : "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$bg-default             : #24345a;
+
+
 /*
  * Web Fonts from fontspring.com
  *
@@ -33,17 +44,13 @@
 
 }
 
-// COMPASS INCLUDES
-@import "compass/reset";
-@import "compass/css3/box-shadow";
-@import "compass/css3/transition";
-
 // UTILITY CLASSES
 .clear { clear: both; }
 
 // BASE TAGS
 body, html {
   background: #24345a url(../../img/noise.png) repeat 0 0;
+  font-family: $font-family-sofia;
 }
 article {
   margin: 0 auto;
@@ -58,7 +65,7 @@ article {
   width: 100%;
   top: 525px;
   position: absolute;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: $font-family-helvetica;
   font-weight: 300;
 
   ul {
@@ -114,7 +121,6 @@ article {
     width: 400px;
     text-align: right;
     float: right;
-    font-family: 'sofia_pro_lightregular', Helvetica, Arial, sans-serif;
     font-size: 22px;
     line-height: 36px;
     color: #C9C9C9;
@@ -130,7 +136,6 @@ article {
   }
   .bio {
       width: 300px;
-      font-family: 'sofia_pro_lightregular', Helvetica, Arial, sans-serif;
       font-size: 16px;
       line-height: 22px;
       float: left;
@@ -146,7 +151,7 @@ article {
     width: 260px;
     margin-left: 50px;
     ul li {
-      font-family: 'sofia_pro_lightregular', Helvetica, Arial, sans-serif;
+
       font-size: 18px;
       line-height: 30px;
       a {
@@ -163,6 +168,35 @@ article {
   }
   .figure {
     float: left;
+  }
+}
+
+// FOOTER
+#footer {
+  font-size: 14px;
+  color: #DDD;
+  line-height: 18px;
+  h1 {
+    font: normal 14px/20px $font-family-helvetica;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  p {
+    margin-bottom: 15px;
+  }
+  .inner {
+    padding-top: 20px;
+    width: 840px;
+    margin: 0 auto;
+  }
+  .column {
+    width: 250px;
+    float: left;
+    margin-right: 30px;
+    &.last {
+      width: 280px;
+      margin-right: 0;
+    }
   }
 }
 

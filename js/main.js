@@ -2,7 +2,7 @@ var MyApp = (function(){
 	// global vars
 	var $window = $(window),
         $navbar = $('#navbar'),
-        $navbarUL = $('#navbarUL'),
+        $navbarUL = $navbar.find('ul'),
         $body = $('body'),
         $scrollTop = 0,
         isStickyNav = false,
