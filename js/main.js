@@ -1,7 +1,15 @@
 var MyApp = (function(){
 	// global vars
 	var $window = $(window),
-	stickyNav = false;
+		isStickyNav = false,
+		isDefaultBg = true,
+		isBottom = false;
+
+	// dynamically set padding of nav to home slide
+	var setNavPadding = function(){
+		var offset = $('.sidebar').offset().left;
+		$('#navbar').find('ul').css('paddingLeft',offset);
+	};
 
 	// nav clicks
 	var bindNavEvents = function() {
@@ -21,11 +29,6 @@ var MyApp = (function(){
 			}
 		})
 	};
-	// dynamically set padding of nav to home slide
-	var setNavPadding = function(){
-		var offset = $('#home').offset().left;
-		$('#navbar').find('ul').css('paddingLeft',offset);
-	};
 	// on resize browser
 	var watchResize = function(){
 		$window.on('resize',function(){
@@ -34,22 +37,32 @@ var MyApp = (function(){
 	};
 	// window scrolling events
 	var watchScroll = function(){
-		$window.scroll(function(){
-			console.log($window.scrollTop());
-			var $navbar = $('#navbar'),
+		var $navbar = $('#navbar'),
+			$navbarUL = $('#navbarUL'),
+			$scrollTop = 0,
 			$body = $('body');
-			if( stickyNav === false && $window.scrollTop() >= 505){
-				$navbar.addClass('stick');
-				stickyNav = true;
-				$body.changeBackground('#E9E9E9');
-				$navbar.find('ul').changeBackground('#51A0CD').addClass('about');
-			}
-			else if (stickyNav === true && $window.scrollTop() < 505) {
-				$navbar.removeClass('stick');
-				stickyNav = false;
-				$body.changeBackground('#24345A');
-				$navbar.find('ul').changeBackground('#BE342A').removeClass('about');
-			}
+		$window.scroll(function(){
+			$scrollTop = $window.scrollTop();
+			// change background color
+			if(isDefaultBg === true && $scrollTop >= 250){
+                $body.changeBackground('#E9E9E9');
+                $navbarUL.changeBackground('#51A0CD');
+                isDefaultBg = false;
+            } else if(isDefaultBg === false && $scrollTop < 250){
+                $body.changeBackground('#24345A');
+                $navbarUL.changeBackground('#BE342A');
+                isDefaultBg = true;
+            }
+            // sticky nav
+            if( isStickyNav === false && $scrollTop >= 505 ){
+                $navbar.addClass('stick');
+                isStickyNav = true;
+            }
+            else if (isStickyNav === true && $scrollTop < 505 ){ // check at 1100
+                $navbar.removeClass('stick');
+                isStickyNav = false;
+            }
+
 		});
 	};
 	var init = function(){

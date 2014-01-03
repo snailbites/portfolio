@@ -2,8 +2,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>Snailbites : Front End Engineer</title>
+        <meta name="description" content="Snail is a Front End Engineer based in the greater New York City.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -19,7 +19,7 @@
     <body>
         <a name="top"></a>
         <nav id="navbar" class="navbar">
-            <ul>
+            <ul id="navbarUL">
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#work">WORK</a></li>
             <li><a href="#blog">BLOG</a></li>
@@ -42,12 +42,12 @@
                 <img src="img/about-frame.png" width="501" height="439" />
             </figure>
             <section class="bio">
-                <p>Snail is a nickname given to me by my high school Biology teacher for passing out dittos slowly.</p>
+                <p>Snail is my old bboy name given to me by my high school Bio teacher.</p>
                 <p>
-                My expertise as a Front End Web Developer comes from value driven and industry tested  experience, combined with a rock solid background in Computer Science from the University of Maryland. I season that with a plethora of volunteer work, including a four month stint working with impovershed communities in Southeast Asia.
+                My expertise as a Front End Developer comes from industry proven experience, combined with a rock solid background in Computer Science from Maryland. I season that with a plethora of volunteer work, including a four month stint working with impovershed communities in Southeast Asia.
                 </p>
                 <p>
-                My people-first approach coupled with my strong technical background, allow me to hand craft an engaging, custom-fit web experience for every project I face.
+                My human approach coupled with my strong technical background, allow me to hand craft an engaging, custom-fit web experience for every project I face.
                 </p>
             </section>
             <div class="clear"></div>
@@ -55,17 +55,16 @@
         <article id="work" class="work">
             <aside class="sidebar">
                 <ul>
-                    <li>J.Crew PDP</li>
-                    <li>Madewell Gift Guide</li>
-                    <li>J.Crew Quickshop</li>
-                    <li>Tim Goodman</li>
-                    <li>Vince and Jeryl</li>
-                    <li>Rich Tu</li>
-                    <li>ESPN Recruiting</li>
-                    <li>Nation</li>
-                    <li>Mark Teixeria</li>
-                    <li>Suze Orman</li>
-                    <li>The Leadership Room</li>
+                    <li><a data-project="pdp" class="selected">J.Crew PDP</a></li>
+                    <li><a data-project="giftGuide">Madewell Gift Guide</a></li>
+                    <li><a data-project="quickshop">J.Crew Quickshop</a></li>
+                    <li><a data-project="tgoodman">Tim Goodman</a></li>
+                    <li><a data-project="wedding">Vince and Jeryl</a></li>
+                    <li><a data-project="richtu">Rich Tu</a></li>
+                    <li><a data-project="espn">ESPN Recruiting Nation</a></li>
+                    <li><a data-project="dreamteam">Mark Teixeria</a></li>
+                    <li><a data-project="tac">Suze Orman</a></li>
+                    <li><a data-project="leadership">The Leadership Room</a></li>
                 </ul>
             </aside>
             <figure>
@@ -73,7 +72,9 @@
             </figure>
         </article>
 
+        <footer id="footer">
 
+        </footer>
 
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
