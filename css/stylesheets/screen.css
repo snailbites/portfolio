@@ -226,10 +226,10 @@ article {
   margin-bottom: 5px;
   border-bottom: 3px solid transparent;
   cursor: pointer;
-  -webkit-transition-duration: 0.1s;
-  -moz-transition-duration: 0.1s;
-  -o-transition-duration: 0.1s;
-  transition-duration: 0.1s;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 /* line 158, ../sass/screen.scss */
 #work .sidebar ul li a.selected, #work .sidebar ul li a:hover {
