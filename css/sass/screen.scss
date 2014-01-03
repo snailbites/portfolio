@@ -126,6 +126,9 @@ article {
     line-height: 36px;
     color: #C9C9C9;
     margin-top: 50px;
+    h1 span {
+      color: $default-red;
+    }
   }
 }
 
