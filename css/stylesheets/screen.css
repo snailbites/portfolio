@@ -251,36 +251,48 @@ article {
   top: 26px;
   left: 25px;
 }
+/* line 183, ../sass/screen.scss */
+#work figure figcaption {
+  position: absolute;
+  bottom: 130px;
+  margin: 0 25px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-top: 3px solid #000;
+  font: normal 13px/16px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  letter-spacing: 1px;
+  color: #DDD;
+}
 
-/* line 187, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 #footer {
   font-size: 14px;
   color: #DDD;
   line-height: 18px;
 }
-/* line 191, ../sass/screen.scss */
+/* line 202, ../sass/screen.scss */
 #footer h1 {
   font: normal 14px/20px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   text-transform: uppercase;
   margin-bottom: 14px;
 }
-/* line 196, ../sass/screen.scss */
+/* line 207, ../sass/screen.scss */
 #footer p {
   margin-bottom: 15px;
 }
-/* line 199, ../sass/screen.scss */
+/* line 210, ../sass/screen.scss */
 #footer .inner {
   padding-top: 20px;
   width: 840px;
   margin: 0 auto;
 }
-/* line 204, ../sass/screen.scss */
+/* line 215, ../sass/screen.scss */
 #footer .column {
   width: 250px;
   float: left;
   margin-right: 30px;
 }
-/* line 208, ../sass/screen.scss */
+/* line 219, ../sass/screen.scss */
 #footer .column.last {
   width: 280px;
   margin-right: 0;

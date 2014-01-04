@@ -1,25 +1,23 @@
 var MyApp = (function(){
 	// global vars
-	var $window = $(window),
-        $navbar = $('#navbar'),
-        $navbarUL = $navbar.find('ul'),
-        $body = $('body'),
-        $scrollTop = 0,
+	var $scrollTop = 0,
         isStickyNav = false,
         isDefaultBg = true,
         isBottom = false,
         isTop = true;
+
+    // cached jquery objs
+    var $window = $(window),
+        $navbar = $('#navbar'),
+        $navbarUL = $navbar.find('ul'),
+        $body = $('body');
 
 	// dynamically set padding of nav to home slide
 	var setNavPadding = function(){
 		var offset = $('.sidebar').offset().left;
 		$('#navbar').find('ul').css('paddingLeft',offset);
 	};
-    var setBackgroundColor = function(){
-        setTimeout(function(){
-            _preparePage($('body').scrollTop());
-        }, 50);
-    };
+
     // click events for portfolio
     var bindSidebarEvents = function(){
         $('.sidebar').on('click','a',function(){
@@ -30,11 +28,9 @@ var MyApp = (function(){
             $this.addClass('selected');
 
             // switch image
-            $('#screenshot').fadeOut(350,function(){
-                $(this).attr('src', "img/screenshots/" + $project + ".png").fadeIn(250);
+            $('#screenshot').fadeOut(250,function(){
+                $(this).attr('src', "img/screenshots/" + $project + ".png").fadeIn(150);
             });
-
-
         })
     }
 	// nav clicks
@@ -49,7 +45,7 @@ var MyApp = (function(){
                 break;
                 case "#work"  : $body.animate({ scrollTop : '1140px' }, 350 );
                 break;
-                case "#blog"  : console.log('test');
+                case "#blog"  : return false;
                 break;
                 default 	  : break;
             }
