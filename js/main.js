@@ -23,16 +23,40 @@ var MyApp = (function(){
         $('.sidebar').on('click','a',function(){
             var $this = $(this),
                 $project = $this.data('project');
+
             // sidebar functionality
             $('.sidebar li a').removeClass('selected');
             $this.addClass('selected');
 
             // switch image
             $('#screenshot').fadeOut(250,function(){
-                $(this).attr('src', "img/screenshots/" + $project + ".png").fadeIn(150);
+                var $this = $(this);
+                $this.attr('data-project', $project);
+                $this.attr('src', "img/screenshots/" + $project + ".png").fadeIn(150);
             });
-        })
+
+            // fetch caption text
+            $.ajax({
+                url: "captions/" + $project + "/index.html",
+                dataType: 'html',
+                success: function(response){
+                    $('#caption').html(response);
+                }
+            });
+        });
     }
+    // caption hover
+    var bindCaptionEvents = function(){
+        $('#screenshot').on('mouseover mouseout',function(e){
+            var $caption = $('#caption');
+            e.stopPropagation();
+            e.preventDefault();
+            switch(e.type){
+                case 'mouseover' : $caption.fadeIn(250); break;
+                case 'mouseout' : $caption.fadeOut(250); break;
+            }
+        });
+    };
 	// nav clicks
 	var bindNavEvents = function() {
 		$('#navbar').on('click','a',function(e){
@@ -65,7 +89,6 @@ var MyApp = (function(){
     };
     var preparePage = function(scrollTop){
         if(scrollTop > 1150){
-            console.log('isStickyNav: ' + isStickyNav)
             if(isStickyNav){
                 $navbar.removeClass('stick').addClass('bottom');
                 isStickyNav = false;
@@ -117,6 +140,7 @@ var MyApp = (function(){
         watchResize();
         bindNavEvents();
         bindSidebarEvents();
+        bindCaptionEvents();
     };
 
     return {

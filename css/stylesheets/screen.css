@@ -253,6 +253,7 @@ article {
 }
 /* line 183, ../sass/screen.scss */
 #work figure figcaption {
+  display: none;
   position: absolute;
   bottom: 130px;
   margin: 0 25px;
@@ -264,35 +265,35 @@ article {
   color: #DDD;
 }
 
-/* line 198, ../sass/screen.scss */
+/* line 199, ../sass/screen.scss */
 #footer {
   font-size: 14px;
   color: #DDD;
   line-height: 18px;
 }
-/* line 202, ../sass/screen.scss */
+/* line 203, ../sass/screen.scss */
 #footer h1 {
   font: normal 14px/20px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   text-transform: uppercase;
   margin-bottom: 14px;
 }
-/* line 207, ../sass/screen.scss */
+/* line 208, ../sass/screen.scss */
 #footer p {
   margin-bottom: 15px;
 }
-/* line 210, ../sass/screen.scss */
+/* line 211, ../sass/screen.scss */
 #footer .inner {
   padding-top: 20px;
   width: 840px;
   margin: 0 auto;
 }
-/* line 215, ../sass/screen.scss */
+/* line 216, ../sass/screen.scss */
 #footer .column {
   width: 250px;
   float: left;
   margin-right: 30px;
 }
-/* line 219, ../sass/screen.scss */
+/* line 220, ../sass/screen.scss */
 #footer .column.last {
   width: 280px;
   margin-right: 0;
