@@ -55,10 +55,11 @@ body, html {
 }
 article {
   margin: 0 auto;
-  max-width: 960px;
+  //max-width: 960px;
   min-height: 600px;
-  width: auto;
+  //width: auto;
   padding: 10px;
+  width: 960px;
 }
 
 // NAVBAR
@@ -79,14 +80,17 @@ article {
     li {
       display: inline;
       padding: 15px;
-      color: #FFF;
       a {
+        text-align: center;
         text-decoration: none;
-        color: #FFF;
+        color: #CCC;
         @include transition-duration(.2s);
-        &.selected,
+        &.selected {
+          color: #FFF;
+          @include transition-duration(.5s);
+        }
         &:hover {
-          color: #000;
+          color: #FFF;
         }
       }
       &:first-child{
@@ -143,6 +147,7 @@ article {
       font-size: 16px;
       line-height: 22px;
       float: left;
+      margin-top: 30px;
       p {
         margin-bottom: 25px;
       }

@@ -47,15 +47,24 @@ var MyApp = (function(){
     }
     // caption hover
     var bindCaptionEvents = function(){
-        $('#screenshot').on('mouseover mouseout',function(e){
+        $('#work figure').hover(
+            function(){
+                $('#caption').stop().fadeIn(150);
+            },
+            function(){
+                $('#caption').stop().fadeOut(150);
+            }
+        );
+        /*
+        $('#screenshot').on('mouseenter mouseout',function(e){
             var $caption = $('#caption');
-            e.stopPropagation();
-            e.preventDefault();
+            //e.stopPropagation();
             switch(e.type){
-                case 'mouseover' : $caption.fadeIn(250); break;
-                case 'mouseout' : $caption.fadeOut(250); break;
+                case 'mouseenter' : $caption.stop().slideDown(150); break;
+                case 'mouseout' : $caption.stop().slideUp(150); break;
             }
         });
+        */
     };
 	// nav clicks
 	var bindNavEvents = function() {
@@ -88,7 +97,9 @@ var MyApp = (function(){
         });
     };
     var preparePage = function(scrollTop){
+        console.log(scrollTop)
         if(scrollTop > 1150){
+            $navbar.find('.link-work').addClass('selected');
             if(isStickyNav){
                 $navbar.removeClass('stick').addClass('bottom');
                 isStickyNav = false;
@@ -101,6 +112,13 @@ var MyApp = (function(){
                 isDefaultBg = false;
             }
         } else if ( scrollTop >= 505 ){
+            if ( scrollTop >= 960 ){
+                $navbar.find('a').removeClass('selected');
+                $navbar.find('.link-work').addClass('selected');
+            } else {
+                $navbar.find('a').removeClass('selected');
+                $navbar.find('.link-about').addClass('selected');
+            }
             if(!isStickyNav){
                 $navbar.addClass('stick').removeClass('bottom');
                 isStickyNav = true;
@@ -111,6 +129,8 @@ var MyApp = (function(){
                 isDefaultBg = false;
             }
         } else if ( scrollTop >= 250 ){
+            $navbar.find('a').removeClass('selected');
+            $navbar.find('.link-about').addClass('selected');
             if( isStickyNav ){
                 $navbar.removeClass('stick');
                 isStickyNav = false;
@@ -121,6 +141,7 @@ var MyApp = (function(){
                 isDefaultBg = false;
             }
         } else if ( scrollTop < 250 ){
+            $navbar.find('a').removeClass('selected');
             if( !isDefaultBg ){
                 $body.changeBackground('#24345A');
                 $navbarUL.changeBackground('#BE342A');
