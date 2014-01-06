@@ -8,6 +8,9 @@ $font-family-sofia      : 'sofia_pro_lightregular', Helvetica, Arial, sans-serif
 $font-family-helvetica  : "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $default-bg             : #24345a;
 $default-red            : #BE342A;
+// responsive vars
+// 962
+// 770 ?
 
 
 /*
@@ -55,11 +58,13 @@ body, html {
 }
 article {
   margin: 0 auto;
-  //max-width: 960px;
   min-height: 600px;
-  //width: auto;
   padding: 10px;
   width: 960px;
+
+  // responsive
+  max-width: 960px;
+  width: auto;
 }
 
 // NAVBAR
@@ -141,6 +146,10 @@ article {
   figure {
     float: left;
     margin: 0px 50px;
+    img {
+      width: auto;
+      max-width: 100%;
+    }
   }
   .bio {
       width: 300px;

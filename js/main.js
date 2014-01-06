@@ -87,6 +87,7 @@ var MyApp = (function(){
 	// on resize browser
 	var watchResize = function(){
 		$window.on('resize',function(){
+            //console.log($(this).width())
 			setNavPadding();
 		});
 	};
@@ -97,7 +98,7 @@ var MyApp = (function(){
         });
     };
     var preparePage = function(scrollTop){
-        console.log(scrollTop)
+        //console.log(scrollTop)
         if(scrollTop > 1150){
             $navbar.find('.link-work').addClass('selected');
             if(isStickyNav){
