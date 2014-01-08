@@ -12,6 +12,11 @@ var MyApp = (function(){
         $navbarUL = $navbar.find('ul'),
         $body = $('body');
 
+
+    var _pageState = {
+        state : 'home', // home,about,work,footer
+    }
+
 	// dynamically set padding of nav to home slide
 	var setNavPadding = function(){
 		var offset = $('.sidebar').offset().left;
@@ -55,16 +60,6 @@ var MyApp = (function(){
                 $('#caption').stop().fadeOut(150);
             }
         );
-        /*
-        $('#screenshot').on('mouseenter mouseout',function(e){
-            var $caption = $('#caption');
-            //e.stopPropagation();
-            switch(e.type){
-                case 'mouseenter' : $caption.stop().slideDown(150); break;
-                case 'mouseout' : $caption.stop().slideUp(150); break;
-            }
-        });
-        */
     };
 	// nav clicks
 	var bindNavEvents = function() {
@@ -96,6 +91,16 @@ var MyApp = (function(){
         $window.scroll(function(){
             setScrollItems($window.scrollTop());
         });
+    };
+    var renderState = function (_pageState){
+        switch(_pageState.state){
+            case 'home' : _setHomeState();
+        }
+    };
+    var _setHomeState = function(){
+        $navbar.find('a').removeClass('selected');
+        $body.changeBackground('#24345A');
+        $navbarUL.changeBackground('#BE342A');
     };
     var preparePage = function(scrollTop){
         //console.log(scrollTop)
@@ -153,7 +158,7 @@ var MyApp = (function(){
     var setScrollItems = function(){
         setTimeout(function(){
             preparePage($window.scrollTop());
-        }, 100 );
+        }, 10 );
     };
     var init = function(){
         setScrollItems();
