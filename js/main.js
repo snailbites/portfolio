@@ -35,9 +35,19 @@ var MyApp = (function(){
 
             // switch image
             $('#screenshot').fadeOut(250,function(){
-                var $this = $(this);
-                $this.attr('data-project', $project);
-                $this.attr('src', "img/screenshots/" + $project + ".png").fadeIn(150);
+                var $this = $(this),
+                    $preloader = $('.preloader');
+                $preloader.show();
+                $.when($this.attr({
+                    'data-project' : $project,
+                    'src' : "img/screenshots/" + $project + ".png"
+                })).done(function(){
+                    $this.fadeIn(150);
+                    $preloader.fadeOut(100);
+                });
+                $(window).load(function(){
+
+                });
             });
 
             // fetch caption text
