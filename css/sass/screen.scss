@@ -101,6 +101,12 @@ article {
           @include opacity(1.0);
           @include text-shadow(#FFF 0 0 8px);
         }
+        &.link-blog:hover{
+          @include opacity(.5);
+          @include transition-duration(.2s);
+          @include text-shadow(none);
+          cursor: default;
+        }
       }
       &:first-child{
         padding-left: 0;

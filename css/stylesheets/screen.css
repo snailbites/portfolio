@@ -164,27 +164,38 @@ article {
   opacity: 1;
   text-shadow: white 0 0 8px;
 }
-/* line 105, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
+#navbar ul li a.link-blog:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  text-shadow: none;
+  cursor: default;
+}
+/* line 111, ../sass/screen.scss */
 #navbar ul li:first-child {
   padding-left: 0;
 }
-/* line 110, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 #navbar.bottom {
   top: 1170px;
 }
-/* line 113, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 #navbar.stick {
   position: fixed;
   top: 20px;
 }
-/* line 117, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 #navbar.about {
   -webkit-box-shadow: #666666 -2px 2px 8px;
   -moz-box-shadow: #666666 -2px 2px 8px;
   box-shadow: #666666 -2px 2px 8px;
 }
 
-/* line 123, ../sass/screen.scss */
+/* line 129, ../sass/screen.scss */
 #footer {
   border-top: 4px solid #000;
   background-color: #24345a;
@@ -192,7 +203,7 @@ article {
   height: 225px;
 }
 
-/* line 134, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 #home .intro {
   width: 400px;
   text-align: right;
@@ -202,22 +213,22 @@ article {
   color: #C9C9C9;
   margin-top: 50px;
 }
-/* line 142, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 #home .intro h1 span {
   color: #be342a;
 }
 
-/* line 150, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 #about figure {
   float: left;
   margin: 0px 50px 80px;
 }
-/* line 153, ../sass/screen.scss */
+/* line 159, ../sass/screen.scss */
 #about figure img {
   width: auto;
   max-width: 100%;
 }
-/* line 158, ../sass/screen.scss */
+/* line 164, ../sass/screen.scss */
 #about .bio {
   width: 300px;
   font-size: 16px;
@@ -225,29 +236,29 @@ article {
   float: left;
   margin-top: 30px;
 }
-/* line 164, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 #about .bio p {
   margin-bottom: 25px;
 }
-/* line 168, ../sass/screen.scss */
+/* line 174, ../sass/screen.scss */
 #about .line {
   width: 100%;
   border-top: 2px groove #FFF;
   clear: both;
 }
 
-/* line 176, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 #work .sidebar {
   float: left;
   width: 260px;
   margin-left: 50px;
 }
-/* line 180, ../sass/screen.scss */
+/* line 186, ../sass/screen.scss */
 #work .sidebar ul li {
   font-size: 18px;
   line-height: 30px;
 }
-/* line 183, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 #work .sidebar ul li a {
   margin-bottom: 5px;
   border-bottom: 3px solid transparent;
@@ -257,11 +268,11 @@ article {
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
-/* line 189, ../sass/screen.scss */
+/* line 195, ../sass/screen.scss */
 #work .sidebar ul li a.selected, #work .sidebar ul li a:hover {
   color: #be342a;
 }
-/* line 195, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 #work figure {
   float: left;
   position: relative;
@@ -269,13 +280,13 @@ article {
   height: 490px;
   background: url(../../img/work-imac.png) no-repeat 0 0;
 }
-/* line 201, ../sass/screen.scss */
+/* line 207, ../sass/screen.scss */
 #work figure #screenshot {
   position: absolute;
   top: 26px;
   left: 25px;
 }
-/* line 206, ../sass/screen.scss */
+/* line 212, ../sass/screen.scss */
 #work figure figcaption {
   display: none;
   position: absolute;
@@ -288,42 +299,42 @@ article {
   letter-spacing: 1px;
   color: #DDD;
 }
-/* line 218, ../sass/screen.scss */
+/* line 224, ../sass/screen.scss */
 #work figure .preloader {
   position: absolute;
   top: 33%;
   left: 45%;
 }
 
-/* line 227, ../sass/screen.scss */
+/* line 233, ../sass/screen.scss */
 #footer {
   font-size: 14px;
   color: #DDD;
   line-height: 18px;
 }
-/* line 231, ../sass/screen.scss */
+/* line 237, ../sass/screen.scss */
 #footer h1 {
   font: normal 14px/20px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   text-transform: uppercase;
   margin-bottom: 14px;
 }
-/* line 236, ../sass/screen.scss */
+/* line 242, ../sass/screen.scss */
 #footer p {
   margin-bottom: 15px;
 }
-/* line 239, ../sass/screen.scss */
+/* line 245, ../sass/screen.scss */
 #footer .inner {
   padding-top: 20px;
   width: 840px;
   margin: 0 auto;
 }
-/* line 244, ../sass/screen.scss */
+/* line 250, ../sass/screen.scss */
 #footer .column {
   width: 250px;
   float: left;
   margin-right: 30px;
 }
-/* line 248, ../sass/screen.scss */
+/* line 254, ../sass/screen.scss */
 #footer .column.last {
   width: 280px;
   margin-right: 0;

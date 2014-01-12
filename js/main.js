@@ -167,6 +167,14 @@ var MyApp = (function(){
             preparePage($window.scrollTop());
         }, 10 );
     };
+    // temp
+    var turnOffBlog = function(){
+        $('#navbar').on('hover click', '.link-blog', function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        });
+    };
     var init = function(){
         setScrollItems();
         setNavPadding();
@@ -175,6 +183,7 @@ var MyApp = (function(){
         bindNavEvents();
         bindSidebarEvents();
         bindCaptionEvents();
+        turnOffBlog();
     };
 
     return {
