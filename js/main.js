@@ -27,7 +27,7 @@ var MyApp = (function(){
     var bindSidebarEvents = function(){
         $('.sidebar').on('click','a',function(){
             var $this = $(this),
-                $project = $this.data('project');
+                $data = $this.data();
 
             // sidebar functionality
             $('.sidebar li a').removeClass('selected');
@@ -39,17 +39,18 @@ var MyApp = (function(){
                     $preloader = $('.preloader');
                 $preloader.show();
                 $.when($this.attr({
-                    'data-project' : $project,
-                    'src' : "img/screenshots/" + $project + ".png"
+                    'data-project' : $data.project,
+                    'src' : "img/screenshots/" + $data.project + ".png"
                 })).done(function(){
                     $this.fadeIn(150);
                     $preloader.fadeOut(100);
+                    $this.parent('a').attr('href',$data.link);
                 });
             });
 
             // fetch caption text
             $.ajax({
-                url: "captions/" + $project + "/index.html",
+                url: "captions/" + $data.project + "/index.html",
                 dataType: 'html',
                 success: function(response){
                     $('#caption').html(response);
