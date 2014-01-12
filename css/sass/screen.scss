@@ -2,6 +2,8 @@
 @import "compass/reset";
 @import "compass/css3/box-shadow";
 @import "compass/css3/transition";
+@import "compass/css3/opacity";
+@import "compass/css3/text-shadow";
 
 // COMPASS VARS
 $font-family-sofia      : 'sofia_pro_lightregular', Helvetica, Arial, sans-serif;
@@ -63,8 +65,8 @@ article {
   width: 960px;
 
   // responsive
-  max-width: 960px;
-  width: auto;
+  // max-width: 960px;
+  // width: auto;
 }
 
 // NAVBAR
@@ -88,14 +90,16 @@ article {
       a {
         text-align: center;
         text-decoration: none;
-        color: #CCC;
+        color: #FFF;
+        @include opacity(.5);
         @include transition-duration(.2s);
         &.selected {
-          color: #FFF;
+          @include opacity(1.0);
           @include transition-duration(.5s);
         }
         &:hover {
-          color: #FFF;
+          @include opacity(1.0);
+          @include text-shadow(#FFF 0 0 8px);
         }
       }
       &:first-child{

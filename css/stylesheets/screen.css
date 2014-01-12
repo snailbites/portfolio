@@ -94,28 +94,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-style: normal;
 }
 
-/* line 52, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 .clear {
   clear: both;
 }
 
-/* line 55, ../sass/screen.scss */
+/* line 57, ../sass/screen.scss */
 body, html {
   background: #24345a url(../../img/noise.png) repeat 0 0;
   font-family: "sofia_pro_lightregular", Helvetica, Arial, sans-serif;
 }
 
-/* line 59, ../sass/screen.scss */
+/* line 61, ../sass/screen.scss */
 article {
   margin: 0 auto;
   min-height: 600px;
   padding: 10px;
   width: 960px;
-  max-width: 960px;
-  width: auto;
 }
 
-/* line 71, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 #navbar {
   width: 100%;
   top: 525px;
@@ -123,7 +121,7 @@ article {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
 }
-/* line 78, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 #navbar ul {
   background-color: #be342a;
   border: 4px solid #000;
@@ -134,54 +132,59 @@ article {
   padding: 9px;
   width: 250px;
 }
-/* line 85, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 #navbar ul li {
   display: inline;
   padding: 15px;
 }
-/* line 88, ../sass/screen.scss */
+/* line 90, ../sass/screen.scss */
 #navbar ul li a {
   text-align: center;
   text-decoration: none;
-  color: #CCC;
+  color: #FFF;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
   -webkit-transition-duration: 0.2s;
   -moz-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
-/* line 93, ../sass/screen.scss */
+/* line 96, ../sass/screen.scss */
 #navbar ul li a.selected {
-  color: #FFF;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
   -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 97, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 #navbar ul li a:hover {
-  color: #FFF;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  text-shadow: white 0 0 8px;
 }
-/* line 101, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 #navbar ul li:first-child {
   padding-left: 0;
 }
-/* line 106, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 #navbar.bottom {
   top: 1170px;
 }
-/* line 109, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 #navbar.stick {
   position: fixed;
   top: 20px;
 }
-/* line 113, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 #navbar.about {
   -webkit-box-shadow: #666666 -2px 2px 8px;
   -moz-box-shadow: #666666 -2px 2px 8px;
   box-shadow: #666666 -2px 2px 8px;
 }
 
-/* line 119, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 #footer {
   border-top: 4px solid #000;
   background-color: #24345a;
@@ -189,7 +192,7 @@ article {
   height: 225px;
 }
 
-/* line 130, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 #home .intro {
   width: 400px;
   text-align: right;
@@ -199,22 +202,22 @@ article {
   color: #C9C9C9;
   margin-top: 50px;
 }
-/* line 138, ../sass/screen.scss */
+/* line 142, ../sass/screen.scss */
 #home .intro h1 span {
   color: #be342a;
 }
 
-/* line 146, ../sass/screen.scss */
+/* line 150, ../sass/screen.scss */
 #about figure {
   float: left;
   margin: 0px 50px 80px;
 }
-/* line 149, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 #about figure img {
   width: auto;
   max-width: 100%;
 }
-/* line 154, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 #about .bio {
   width: 300px;
   font-size: 16px;
@@ -222,29 +225,29 @@ article {
   float: left;
   margin-top: 30px;
 }
-/* line 160, ../sass/screen.scss */
+/* line 164, ../sass/screen.scss */
 #about .bio p {
   margin-bottom: 25px;
 }
-/* line 164, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 #about .line {
   width: 100%;
   border-top: 2px groove #FFF;
   clear: both;
 }
 
-/* line 172, ../sass/screen.scss */
+/* line 176, ../sass/screen.scss */
 #work .sidebar {
   float: left;
   width: 260px;
   margin-left: 50px;
 }
-/* line 176, ../sass/screen.scss */
+/* line 180, ../sass/screen.scss */
 #work .sidebar ul li {
   font-size: 18px;
   line-height: 30px;
 }
-/* line 179, ../sass/screen.scss */
+/* line 183, ../sass/screen.scss */
 #work .sidebar ul li a {
   margin-bottom: 5px;
   border-bottom: 3px solid transparent;
@@ -254,11 +257,11 @@ article {
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
-/* line 185, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 #work .sidebar ul li a.selected, #work .sidebar ul li a:hover {
   color: #be342a;
 }
-/* line 191, ../sass/screen.scss */
+/* line 195, ../sass/screen.scss */
 #work figure {
   float: left;
   position: relative;
@@ -266,13 +269,13 @@ article {
   height: 490px;
   background: url(../../img/work-imac.png) no-repeat 0 0;
 }
-/* line 197, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 #work figure #screenshot {
   position: absolute;
   top: 26px;
   left: 25px;
 }
-/* line 202, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 #work figure figcaption {
   display: none;
   position: absolute;
@@ -285,42 +288,42 @@ article {
   letter-spacing: 1px;
   color: #DDD;
 }
-/* line 214, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 #work figure .preloader {
   position: absolute;
   top: 33%;
   left: 45%;
 }
 
-/* line 223, ../sass/screen.scss */
+/* line 227, ../sass/screen.scss */
 #footer {
   font-size: 14px;
   color: #DDD;
   line-height: 18px;
 }
-/* line 227, ../sass/screen.scss */
+/* line 231, ../sass/screen.scss */
 #footer h1 {
   font: normal 14px/20px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   text-transform: uppercase;
   margin-bottom: 14px;
 }
-/* line 232, ../sass/screen.scss */
+/* line 236, ../sass/screen.scss */
 #footer p {
   margin-bottom: 15px;
 }
-/* line 235, ../sass/screen.scss */
+/* line 239, ../sass/screen.scss */
 #footer .inner {
   padding-top: 20px;
   width: 840px;
   margin: 0 auto;
 }
-/* line 240, ../sass/screen.scss */
+/* line 244, ../sass/screen.scss */
 #footer .column {
   width: 250px;
   float: left;
   margin-right: 30px;
 }
-/* line 244, ../sass/screen.scss */
+/* line 248, ../sass/screen.scss */
 #footer .column.last {
   width: 280px;
   margin-right: 0;
