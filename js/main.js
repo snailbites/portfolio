@@ -45,9 +45,6 @@ var MyApp = (function(){
                     $this.fadeIn(150);
                     $preloader.fadeOut(100);
                 });
-                $(window).load(function(){
-
-                });
             });
 
             // fetch caption text
@@ -187,10 +184,15 @@ var MyApp = (function(){
 
 // jQuery helper plugins
 (function($){
-	$.fn.changeBackground = function(hex){
-		var fadeDuration = 200;
-		return this.animate({
-			backgroundColor : hex
-		}, fadeDuration );
-	}
+    $.fn.changeBackground = function(hex){
+        var fadeDuration = 200;
+        return this.animate({
+            backgroundColor : hex
+        }, fadeDuration );
+    }
+        $.fn.preload = function() {
+        return this.each(function(){
+            $('<img/>')[0].src = this;
+        });
+    }
 })(jQuery);
