@@ -148,6 +148,15 @@ article {
     h1 span {
       color: $default-red;
     }
+    a {
+      color: #C9C9C9;
+      text-decoration: none;
+      @include transition-duration(.2s);
+      &:hover {
+        @include opacity(1.0);
+        @include text-shadow(#CCC 0 0 2px);
+      }
+    }
   }
 }
 
