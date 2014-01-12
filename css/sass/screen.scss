@@ -149,12 +149,13 @@ article {
       color: $default-red;
     }
     a {
-      color: #C9C9C9;
+      color: $default-red;
       text-decoration: none;
+      //border-bottom: 1px dotted #425276;
       @include transition-duration(.2s);
       &:hover {
         @include opacity(1.0);
-        @include text-shadow(#CCC 0 0 2px);
+        @include text-shadow(#480b06 0 0 2px);
       }
     }
   }
