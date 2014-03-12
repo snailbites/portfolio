@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+{exp:channel:entries channel="tech_blog"}
+<header>
+<h1>My Blog</h1>
+</header>
+<section>
+<article>
+<header>
+<h1>{title}</h1>
+<h2><time>{entry_date format="%l, %F %j%S %Y, %g:%i%a"}</time></h2>
+</header>
+{blog-body}
+</article>
+</section>
+<footer></footer>
+{/exp:channel:entries}
+</body>
+</html>
