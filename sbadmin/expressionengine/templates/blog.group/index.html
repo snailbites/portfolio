@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- meta -->
+	<meta charset="utf-8" />
+	<meta name="robots" content="noindex, nofollow" />
+
+	<title>Snailbites | Vincent Nalupta, Front-End Web Developer | Daddy's World</title>
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<meta name="description" content="On March 17th, 2012, I became a dad. This is a blog about what that's like." />
+
+	<!-- open graph -->
+	<meta property="og:title" content="Snailbites | Vincent Nalupta, Front-End Web Developer" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://www.snailbites.com" />
+	<meta property="og:image" content="http://www.snailbites.com/images/opengraph-logo.png" />
+	<meta property="og:description" content="Snailbites is the home of Vincent Nalupta, a web designer and developer, working in Montclair, NJ and the New York City area." />
+	<meta property="og:site_name" content="Snailbites | Craft &amp; Design" />
+	<meta property="fb:admins" content="698575240" />
+
+	<!-- css -->
+	<link rel="stylesheet" href="/css/stylesheets/normalize.css">
+	<link rel="stylesheet" href="/css/stylesheets/blog.css">
+</head>
+
+</head>
+<body>
+<div id="site-wrapper" style="margin: 0 10px;">
+
+	<header id="banner">
+		<a href="{path=''}" id="logo"><h1 class="text-hide">Daddy's World</h1></a>
+		<div id="tag-line"><h2>On <em>March 17th, 2012</em>, I became a dad.<br/>This is a blog about what that's like.</h2></div>
+	</header>
+
+	<div class="border"></div>
+
+	<section id="main" class="clearfix">
+		{exp:channel:entries channel="tech_blog"}
+		<article class="clearfix">
+			<section class="letter">
+				{if blog-letter}{blog-letter}{/if}
+			</section>
+
+			<section class="sidebar">
+				<header>
+					<h1>{title}</h1>
+					<h2><time>{entry_date format="%l, %F %j%S %Y, %g:%i%a"}</time></h2>
+				</header>
+			</section>
+
+			<section class="content">
+				<div class="blog-body">{blog-body}</div>
+				<div class="border"></div>
+			</section>
+
+			<!--<div class="clear"></div>-->
+		</article>
+		{/exp:channel:entries}
+		&nbsp;
+	</section>
+
+	<footer class="clearfix">
+		<section class="inner">
+			<h3>Copyright 2012 <a href="http://www.snailbites.com/" target="_blank">snailbites.com</a></h3>
+		</section>
+	</footer>
+
+</div>
+</body>
+</html>

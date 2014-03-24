@@ -1,0 +1,135 @@
+body {
+	background: url(/images/blog-bg.jpg) repeat 0 0;
+	margin: 0 auto 25px;
+	width: 100%; max-width: 980px;
+	font-family: Helvetica,Arial,sans-serif;
+}
+a {
+	color: #1468a9;
+	text-decoration: none;
+	&:hover {
+		color: #acc6da;
+	}
+}
+em { font-style: italic; }
+
+.text-hide { text-indent: -9999px; }
+.border { background: url(/images/blog-border.png) 0 0 repeat-x; height: 2px; width: 100%; }
+
+ol {
+	margin: 1em 1.5em;
+	li {
+		list-style: decimal;
+		margin: 3px 0;
+	}
+}
+ol
+
+/* clearing */
+.clear { clear: both; }
+.clearfix:before, .clearfix:after { display: table; content: "";}
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+/* =-=-=-=- HEADER AREA =-=-=-=- */
+#banner {
+	width: 100%;
+	height: 95px;
+	padding: 15px 0;
+}
+#logo {
+	height: 95px;
+	width: 23.958333333333%;
+	float: left;
+	background: url(/images/blog-logo.png) no-repeat 0 0;
+	margin-left: -15px;
+}
+#tag-line {
+	height: 95px;
+	width: 73.958333333333%;
+	float: right;
+	position: relative;
+}
+#tag-line h2 {
+	position: absolute;
+	bottom: 0;
+	font-family: "AllerRegular",Helvetica,Arial,sans-serif;
+	font-size: .875em;
+	color: #153853;
+	line-height: 1.2em;
+	letter-spacing: .09em;
+
+	-moz-text-shadow: 1px 1px 1px #EEEEEE;
+	-webkit-text-shadow: 1px 1px 1px #EEEEEE;
+	text-shadow: 1px 1px 1px #EEEEEE;
+}
+
+/* =-=-=-=- MAIN CONTENT AREA =-=-=-=- */
+#main {
+	clear: both;
+}
+
+/* =-=-=-=- ARTICLE =-=-=-=- */
+article {
+	font-size: .8em;
+	line-height: 1.25em;
+	margin-top: 20px;
+	color: #3e372e;
+	position: relative;
+	header {
+		font-family: "AllerRegular",Helvetica,Arial,sans-serif;
+		h1 {
+			text-transform: uppercase;
+			font-size: 1.4em;
+			color: #333333;
+			margin-bottom: .75em;
+			text-align: right;
+			color: #787871;
+
+			-moz-text-shadow: 1px 1px 1px #DDD;
+			-webkit-text-shadow: 1px 1px 1px #DDD;
+			text-shadow: 1px 1px 1px #DDD;
+		}
+		h2 {
+			font-size: .85em;
+			text-align: right;
+			color: #372619;
+		}
+	}
+}
+
+.sidebar {
+	width: 23.958333333333%;
+	float: left;
+}
+.content {
+	width: 73.958333333333%;
+	float: right;
+}
+.blog-body {
+	margin-bottom: 20px;
+}
+.letter {
+	position: absolute;
+	bottom: 20px;
+	width: 205px;
+	line-height: 1.5em;
+	font-size: 1.1em;
+	margin-left: 25px;
+	font-family: "BlackJackRegular", serif;
+	text-align: right;
+}
+
+/* =-=-=-=- FOOTER AREA =-=-=-=- */
+footer {
+	clear: both;
+	padding: 5px 0;
+	.inner {
+		width: 73.958333333333%;
+		float: right;
+		font-family: "AllerRegular",Helvetica,Arial,sans-serif;
+		font-size: 11px;
+		text-transform: uppercase;
+
+	}
+}
