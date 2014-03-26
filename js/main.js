@@ -40,7 +40,7 @@ var MyApp = (function(){
                 $preloader.show();
                 $.when($this.attr({
                     'data-project' : $data.project,
-                    'src' : "img/screenshots/" + $data.project + ".png"
+                    'src' : "/img/" + $data.project + ".png"
                 })).done(function(){
                     $this.fadeIn(150);
                     $preloader.fadeOut(100);
@@ -200,9 +200,9 @@ var MyApp = (function(){
             backgroundColor : hex
         }, fadeDuration );
     }
-        $.fn.preload = function() {
-        return this.each(function(){
-            $('<img/>')[0].src = this;
-        });
+    $.fn.preload = function() {
+    return this.each(function(){
+        $('<img/>')[0].src = this;
+    });
     }
 })(jQuery);
