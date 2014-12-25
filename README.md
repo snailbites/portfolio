@@ -1,6 +1,4 @@
 portfolio
 =========
 
-A repo for my portfolio
-
-I don't know what I'm doing here.
+A repo for my old portfolio. This repo is now out of date.
